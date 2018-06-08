@@ -1,9 +1,11 @@
 library("rcv", lib.loc="~/R/win-library/3.5")
-
 library("readr", lib.loc="~/R/win-library/3.5")
 
-raw_ballot <- read_tsv(file="20180605_4_ballotimage.txt",col_names=FALSE)
-raw_lookup <- read_tsv(file="20180605_4_masterlookup.txt", col_names=FALSE))
+input_ballot <- "data/20180607_ballotimage.txt"
+input_lookup <- "data/20180607_masterlookup.txt"
+
+raw_ballot <- read_tsv(file=input_ballot, col_names=FALSE)
+raw_lookup <- read_tsv(file=input_lookup, col_names=FALSE)
 
 cleaned <- clean_ballot(ballot = raw_ballot, b_header = T, 
                         lookup = raw_lookup, l_header = T, 
