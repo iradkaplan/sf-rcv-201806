@@ -1,8 +1,8 @@
 library("rcv", lib.loc="~/R/win-library/3.5")
 library("readr", lib.loc="~/R/win-library/3.5")
 
-input_ballot <- "data/20180607_ballotimage.txt"
-input_lookup <- "data/20180607_masterlookup.txt"
+input_ballot <- "data/20180605_1_ballotimage.txt"
+input_lookup <- "data/20180605_1_masterlookup.txt"
 
 raw_ballot <- read_tsv(file=input_ballot, col_names=FALSE)
 raw_lookup <- read_tsv(file=input_lookup, col_names=FALSE)
